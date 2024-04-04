@@ -38,6 +38,8 @@ Borrow out = A'Bin + A'B + BBin
 
 ## Truthtable:
 ![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/8556aac6-03ff-4249-b959-6cf8fa5074f2)
+
+
 The logical expression of the term A0, A1, and A2 are as follows:
 
 A0 = D1 + D3 + D5 + D7
