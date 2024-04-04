@@ -37,59 +37,46 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 ## Truthtable:
-![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/8556aac6-03ff-4249-b959-6cf8fa5074f2)
-
-
-The logical expression of the term A0, A1, and A2 are as follows:
-
-A0 = D1 + D3 + D5 + D7
-
-A1 = D2 + D3 + D6 + D7
-
-A2 = D4 + D5 + D6 + D7
-
-Logical circuit of the above expressions is given below:
-
-![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/7a13b0b0-081b-4581-975a-12d91a4f9c8c)
-
+### FULL-ADDER : 
+![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/fe8a893e-7da2-49a7-b5f0-1fc2e4a1976f)
+### FULL-SUBTRACTOR:
+![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/532faf89-78bb-4299-b8ca-9a967622141a)
 
 
 ## Procedure:
 
-STEP-1 Define Inputs and Outputs
+STEP-1 Open Quartus Prime software.
 
-STEP-2 Understand the Encoder Functionality
+STEP-2 Create a new project and select the target FPGA device.
 
-STEP-3 Design the Functional Table
+STEP-3 Design and implement the full adder/subtractor using Verilog or VHDL within a new HDL file.
 
-STEP-4 Write Verilog Code
+STEP-4 Add the HDL file to the project and compile the design.
 
-STEP-5 Verify Verilog Code
-
-STEP-6 Synthesize the Design
-
-STEP-7 Implement in FPGA
-
-STEP-8 Verify Functionality on FPGA
+STEP-5 Program the FPGA with the compiled design to test the functionality of the full adder/subtractor.
 
 # Program:
 
 ```
-module Exp_05(a0,a1,a2,d0,d1,d2,d3,d4,d5,d6,d7);
-input d0,d1,d2,d3,d4,d5,d6,d7;
-output a0,a1,a2;
-assign a0=d1|d3|d5|d7;
-assign a1=d2|d3|d6|d7;
-assign a2=d4|d5|d6|d7;
+module fulladdsub(a,b,c,sum,carry,BO,DIFF);
+input a,b,c;
+output sum,carry,BO,DIFF;
+assign sum=a^b^c;
+assign carry= a&b | a&c | b&c;
+wire a0;
+not (a0,a);
+assign BO= b&c | a0&c | a0&b;
+assign DIFF=a^b^c;
 endmodule
 ```
 
 # RTL Schematic:
-![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/1c730a85-c9bd-4b5a-8cfa-755689b16681)
+![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/776457b8-69fb-4627-87a1-4c58b479b2c9)
 
 
 # Output Timing Waveform:
-![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/93bc4d8c-e3f8-4864-a5de-d7c05aa9b211)
+![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/db43bff2-a490-4df7-8099-e8dfba237afa)
+
 
 
 # Result:
