@@ -36,11 +36,7 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-## Truthtable:
-### FULL-ADDER : 
-![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/fe8a893e-7da2-49a7-b5f0-1fc2e4a1976f)
-### FULL-SUBTRACTOR:
-![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/532faf89-78bb-4299-b8ca-9a967622141a)
+
 
 
 ## Procedure:
@@ -70,10 +66,15 @@ assign DIFF=a^b^c;
 endmodule
 ```
 
+
 # RTL Schematic:
 ![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/776457b8-69fb-4627-87a1-4c58b479b2c9)
 
-
+## Truthtable:
+### FULL-ADDER : 
+![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/fe8a893e-7da2-49a7-b5f0-1fc2e4a1976f)
+### FULL-SUBTRACTOR:
+![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/532faf89-78bb-4299-b8ca-9a967622141a)
 # Output Timing Waveform:
 ![image](https://github.com/arbasil05/FULL_ADDER_SUBTRACTOR/assets/144218037/db43bff2-a490-4df7-8099-e8dfba237afa)
 
